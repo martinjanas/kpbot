@@ -127,23 +127,17 @@ function CleanRooms()
         }
     }
 }
-    
+
 function MovePacientToAnotherRoom()
 {
     const room_patients = GetPacientsInRooms();
 
     for (const patient of room_patients)
     {
-        const diseases_cured = patient.diseasesCured;
-    
-        if (Array.isArray(diseases_cured))
-        {
-            for (const disease_cured of diseases_cured)
-            {
-                console.log(disease_cured);
-            }
-        }
-        else console.warn(`Patient ID: ${patient.id} has no cured diseases or it's not iterable.`);
+        if (patient.room != 164)
+            continue;
+
+        console.log(`diseases length: ${patient.diseases.length}`);
     }
 }
 
