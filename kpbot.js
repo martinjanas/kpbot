@@ -7,6 +7,7 @@
 // @match        https://s1.cz.kapihospital.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        unsafeWindow
+// @require      https://raw.githubusercontent.com/martinjanas/kpbot/refs/heads/main/utils.js
 // ==/UserScript==
 
 (function()
