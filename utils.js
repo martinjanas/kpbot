@@ -128,30 +128,48 @@ function CleanRooms()
     }
 }
     
-
-function main()
+function MovePacientToAnotherRoom()
 {
-    CleanRooms();
-
     const room_patients = GetPacientsInRooms();
 
     for (const patient of room_patients)
     {
-        const room_id_str = patient.room;
-        const room_id = room_id_str.replace('r', '');
-
-        const is_cured = patient.cured;
-        const seat = patient.seat;
-        const pacient_id = patient.id;
-
-        if (is_cured)
-            cashUpPatient(pacient_id, room_id, seat, 1);
-
-        const diseases = patient.diseases;
-        for (const disease of diseases)
+        const diseases_cured = patient.diseasesCured;
+        for (const disease_cured of diseases_cured)
         {
-            //giveMed(room_id, 1, disease);
+            console.log(disease_cured);
         }
 
     }
+
+    diseasesCured
+}
+
+function main()
+{
+    MovePacientToAnotherRoom();
+
+    //CleanRooms();
+
+    //const room_patients = GetPacientsInRooms();
+
+    // for (const patient of room_patients)
+    // {
+    //     const room_id_str = patient.room;
+    //     const room_id = room_id_str.replace('r', '');
+
+    //     const is_cured = patient.cured;
+    //     const seat = patient.seat;
+    //     const pacient_id = patient.id;
+
+    //     if (is_cured)
+    //         cashUpPatient(pacient_id, room_id, seat, 1);
+
+    //     const diseases = patient.diseases;
+    //     for (const disease of diseases)
+    //     {
+    //         //giveMed(room_id, 1, disease);
+    //     }
+
+    // }
 }
