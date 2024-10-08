@@ -24,8 +24,9 @@ function sendRequest(url, method, data, callback)
 
 function GetPacientsInRooms()
 {
+    const patients = unsafeWindow.Global.patients;
     const room_patients = [];
-    for (const patient of unsafeWindow.Global.patients)
+    for (const patient of patients)
     {
         if (patient.room === 0)
             continue;

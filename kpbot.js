@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Kapi Hospital Bot
 // @namespace    http://tampermonkey.net/
-// @version      0.1.7
+// @version      0.1.8
 // @description  Kapi Hospital experimental bot
 // @author       Martin Janás
 // @match        https://s1.cz.kapihospital.com/*
