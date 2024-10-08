@@ -38,6 +38,8 @@ function GetPacientsInRooms()
         }
         return room_patients;
     }
+
+    return [];
 }
 
 function cleanRoom(room, level)
