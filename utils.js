@@ -135,14 +135,16 @@ function MovePacientToAnotherRoom()
     for (const patient of room_patients)
     {
         const diseases_cured = patient.diseasesCured;
-        for (const disease_cured of diseases_cured)
+    
+        if (Array.isArray(diseases_cured))
         {
-            console.log(disease_cured);
+            for (const disease_cured of diseases_cured)
+            {
+                console.log(disease_cured);
+            }
         }
-
+        else console.warn(`Patient ID: ${patient.id} has no cured diseases or it's not iterable.`);
     }
-
-    diseasesCured
 }
 
 function main()
