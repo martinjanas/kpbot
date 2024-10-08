@@ -24,21 +24,15 @@ function sendRequest(url, method, data, callback)
 
 function GetPacientsInRooms()
 {
-    if (typeof unsafeWindow.Global !== "undefined" && unsafeWindow.Global.patients)
+    const room_patients = [];
+    for (const patient of unsafeWindow.Global.patients)
     {
-        const patients = unsafeWindow.Global.patients;
-        const room_patients = [];
+        if (patient.room === 0)
+            continue;
 
-        for (const index in patients)
-        {
-            const patient = patients[index];
-            if (patient.room == 0)
-                continue;
-
-            room_patients.push(patient);
-        }
-        return room_patients;
+        room_patients.push(patient);
     }
+    return room_patients;
 }
 
 function cleanRoom(room, level)
@@ -109,7 +103,7 @@ function CleanRooms()
 {
     if (typeof unsafeWindow.Global !== "undefined" && unsafeWindow.Global.rooms)
     {
-         const rooms = unsafeWindow.Global.rooms;
+        const rooms = unsafeWindow.Global.rooms;
 
         for (const room of rooms)
         {
