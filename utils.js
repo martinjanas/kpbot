@@ -29,8 +29,9 @@ function GetPacientsInRooms()
         const patients = unsafeWindow.Global.patients;
         const room_patients = [];
 
-        for (const patient of patients)
+        for (const index in patients)
         {
+            const patient = patients[index];
             if (patient.room == 0)
                 continue;
 
@@ -38,8 +39,6 @@ function GetPacientsInRooms()
         }
         return room_patients;
     }
-
-    return [];
 }
 
 function cleanRoom(room, level)
