@@ -9,6 +9,7 @@
 // @grant        unsafeWindow
 // @require      https://raw.githubusercontent.com/martinjanas/kpbot/refs/heads/main/utils.js
 // @updateURL    https://raw.githubusercontent.com/martinjanas/kpbot/refs/heads/main/kpbot.js
+// @downloadURL  https://raw.githubusercontent.com/martinjanas/kpbot/refs/heads/main/kpbot.js
 // ==/UserScript==
 
 (function()
