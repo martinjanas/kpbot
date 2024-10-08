@@ -130,14 +130,15 @@ function CleanRooms()
 
 function MovePacientToAnotherRoom()
 {
-    const room_patients = GetPacientsInRooms();
+    const patients = GetPacientsInRooms();
 
-    for (const patient of room_patients)
+    for (const patient of patients)
     {
         if (patient.room != 164)
             continue;
 
-        console.log(`diseases length: ${patient.diseases.length}`);
+        const len = patient.diseases.length;
+        console.log(`diseases length: ${len}`);
     }
 }
 
